@@ -49,5 +49,5 @@ window.io = require('socket.io-client');
 
 window.Echo = new Echo({
     broadcaster: 'socket.io',
-    host: 'http://52.215.235.208/laravel-socket/public:6001'
+    host: window.location.hostname + ':6001'
 });

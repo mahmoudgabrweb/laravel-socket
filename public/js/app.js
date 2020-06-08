@@ -48816,7 +48816,7 @@ if (token) {
 window.io = __webpack_require__(/*! socket.io-client */ "./node_modules/socket.io-client/lib/index.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'socket.io',
-  host: 'http://52.215.235.208/laravel-socket/public:6001'
+  host: window.location.hostname + ':6001'
 });
 
 /***/ }),
