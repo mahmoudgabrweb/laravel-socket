@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\TestSocketEvent;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redis;
 
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\Redis;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('countries', function () {
     return Cache::remember('countries.all', 20, function () {
@@ -24,34 +25,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource("activity_log", "Logging\ActivityLogController");
 
-
 Route::resource("categories", "CategoryController");
-
 
 Route::get('categories/restore/{id}', "CategoryController@restore");
 
-
-
-Route::get("get_redis", function() {
+Route::get("get_redis", function () {
     $visits = Redis::incr("visits");
     echo $visits;
 });
 
-
-Route::get("vue_lesson_1", function() {
+Route::get("vue_lesson_1", function () {
     return view("vue_lesson_1");
 });
-
 
 Route::get('component', function () {
     return view("component");
 });
 
+Route::get("show-event", function () {
+    return view("show_events");
+});
 
+Route::get("fire-event", function () {
+    event(new TestSocketEvent("this is the message"));
+});
