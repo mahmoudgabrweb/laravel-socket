@@ -22,10 +22,6 @@
         "0": {
             "type": "vcs",
             "url": "https://github.com/indexholdingdxb/logsmanagement.git"
-        },
-        "myvendor/mypackage": {
-            "type": "path",
-            "url": "/var/www/html/laravel_tests/packages/MyVendor/MyPackage"
         }
     },
     "require-dev": {
