@@ -49,5 +49,6 @@ window.io = require('socket.io-client');
 
 window.Echo = new Echo({
     broadcaster: 'socket.io',
-    host: window.location.hostname + ':65080'
+    host: window.location.hostname + ':65080',
+    rejectUnauthorized: false
 });
