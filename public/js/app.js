@@ -48816,7 +48816,11 @@ if (token) {
 window.io = __webpack_require__(/*! socket.io-client */ "./node_modules/socket.io-client/lib/index.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'socket.io',
-  host: window.location.hostname + ':65080'
+  host: window.location.hostname + ':65080',
+  headers: {
+    'appId': 'https://test.belikedubai.com',
+    'key': "9230dd44214f9f29cc433069df0eb08c"
+  }
 });
 
 /***/ }),
