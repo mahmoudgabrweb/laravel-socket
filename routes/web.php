@@ -4,6 +4,10 @@ use App\Events\TestSocketEvent;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redis;
 
+if(env('FORCE_HTTPS') == true){
+    URL::forceScheme('https');
+    }
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
