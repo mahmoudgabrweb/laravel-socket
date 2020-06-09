@@ -48817,7 +48817,9 @@ window.io = __webpack_require__(/*! socket.io-client */ "./node_modules/socket.i
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'socket.io',
   host: window.location.hostname + ':65080',
-  rejectUnauthorized: false
+  rejectUnauthorized: false,
+  transports: ['websocket', 'polling', 'flashsocket'] // Fix CORS error!
+
 });
 
 /***/ }),
