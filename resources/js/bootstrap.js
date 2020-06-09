@@ -50,10 +50,8 @@ window.io = require('socket.io-client');
 window.Echo = new Echo({
     broadcaster: 'socket.io',
     host: window.location.hostname + ':65080',
-    // headers: {
-    //     'appId': 'https://test.belikedubai.com',
-    //     'key': "9230dd44214f9f29cc433069df0eb08c",
-    //     "Access-Control-Allow-Origin": "https://test.belikedubai.com:65080"
-    // },
-    encrypted: false,
+    headers: {
+        "appId": "492d4402322a2499",
+        "key": "306a24a74fae3e88af72025e98202480"
+    },
 });

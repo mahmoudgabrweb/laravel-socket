@@ -48817,12 +48817,10 @@ window.io = __webpack_require__(/*! socket.io-client */ "./node_modules/socket.i
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'socket.io',
   host: window.location.hostname + ':65080',
-  // headers: {
-  //     'appId': 'https://test.belikedubai.com',
-  //     'key': "9230dd44214f9f29cc433069df0eb08c",
-  //     "Access-Control-Allow-Origin": "https://test.belikedubai.com:65080"
-  // },
-  encrypted: false
+  headers: {
+    "appId": "492d4402322a2499",
+    "key": "306a24a74fae3e88af72025e98202480"
+  }
 });
 
 /***/ }),
