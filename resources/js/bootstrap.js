@@ -51,5 +51,5 @@ window.Echo = new Echo({
     broadcaster: 'socket.io',
     host: window.location.hostname + ':65080',
     rejectUnauthorized: false,
-    transports: ['websocket', 'polling', 'flashsocket'] // Fix CORS error!
+    transports: ['websocket', 'polling', 'flashsocket', 'ws', 'wss'] // Fix CORS error!
 });
